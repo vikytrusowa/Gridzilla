@@ -1,0 +1,53 @@
+@import "mixines";
+.rows{
+  .row();
+}
+.about{
+  &__name{
+    font-family: ChunkFive;
+    color:  #000000;
+    font-size: 30px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: center;
+  }
+  &__info{
+    font-family: HelveticaNeue;
+    color:  #464646;
+    font-size: 12px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 500;
+    line-height: 16px;
+  }
+  &__text{
+    font-family: HelveticaNeue;
+    color:  #414141;
+    font-size: 12px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0;
+  }
+
+}
+.paragraph:first-letter{
+  font-family: HelveticaNeue;
+  color:  #f03c3c;
+  font-size: 36px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 700;
+  line-height: 18px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+}
+.quote{
+  font-family: HelveticaNeue;
+  color:  #414141;
+  font-size: 12px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  font-style: italic;
+  line-height: 18px;
+}
+.quote:before{
+  content: "\201c";
+  font-family: HelveticaNeue;
+  color:  #f03c3c;
+  font-size: 72px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 400;
+  line-height: 18px;
+}

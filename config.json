@@ -1,0 +1,14 @@
+{
+  "vars": {},
+  "css": [
+    "grid.less",
+    "navs.less",
+    "jumbotron.less",
+    "component-animations.less",
+    "carousel.less"
+  ],
+  "js": [
+    "carousel.js"
+  ],
+  "customizerUrl": "<none>"
+}
