@@ -76,8 +76,22 @@
                 Sed pretium metus sit amet erat blandit vitae pulvinar lorem egestas.</p>
         </div>
 
+        <div class="col-md-12 comment">
+            <form class="form col-md-3">
+                <input name="name" placeholder="Your name" type="text" class="form__name" required>
+                <textarea name="comment" placeholder="Your comment" class="form__comment" required></textarea>
+                <span class="js__form--eror"></span>
+                <button type="button" class="form__button">Add</button>
+
+            </form>
+            <ul class="comment__list col-md-3 ">
+
+            </ul>
+        </div>
     </section>
 </main>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+<script src="js/about.js"></script>
 </body>
 </html>
