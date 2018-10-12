@@ -1,0 +1,49 @@
+@import "../utils/mixines";
+.contact{
+.column();
+  justify-content: space-around;
+  height: 1000px;
+  &__name{
+  .libre();
+    text-align: center;
+  }
+  &__info{
+   .nutico();
+    color:  @gray;
+    line-height: 16px;
+  }
+}
+.map{
+  height: 400px;
+}
+.form{
+  .column();
+  height: 400px;
+  justify-content: space-around;
+  &__element{
+    .nutico();
+    color: @grey ;
+    line-height: 28px;
+    text-transform: uppercase;
+    height: 33px;
+    border: 1px solid @beige;
+    background-color:  @beige;
+
+    &--message{
+      height: 203px;
+    }
+  }
+  &__button{
+    font-family: 'Nunito', sans-serif;
+    color: @grey;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    border: none;
+    background: transparent;
+
+  }
+}
+.creep{
+  width: 2%;
+}

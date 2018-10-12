@@ -1,0 +1,279 @@
+@import "../utils/mixines";
+.heading{
+  .row();
+
+  &__logo{
+    .libre();
+    font-size: 36px;
+    text-align: center;
+    &--dot{
+      .libre();
+      color:  @red;
+      font-size: 36px;
+      text-align: center;
+    }
+  }
+  &__input{
+    border: 1px solid @light;
+    box-sizing: border-box;
+    .nutico-one();
+    height: 33px;
+    color: @light;
+    text-indent: 10px;
+    position: relative;
+
+  }
+  &__button{
+    background:  url("../img/search.png") no-repeat;
+    position: absolute;
+    right: 20%;
+    height: 20px;
+    width: 20px;
+    border: none;
+  }
+
+}
+.menu{
+  .row();
+  list-style: none;
+
+
+  &__link{
+    text-decoration: none;
+    position: relative;
+    .nutico();
+    color:  @light-black;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    &--active{
+      color:  @red;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    &--active:before{
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid red;
+      width: 99px;
+      right: 2px;
+      bottom: 33px;
+    }
+  }
+  &__link:after{
+    content: '|';
+    margin: 0 0 0 35%;
+    color: #ececec;
+  }
+
+
+}
+
+
+.line__top{
+  border-top: 1px solid @light;
+  margin: 3% 0;
+}
+.line__bottom{
+  border-bottom: 1px solid @light;
+}
+.class{
+  .column();
+}
+.slide{
+  .row();
+  flex-wrap: wrap;
+
+
+  &__head{
+    position: relative;
+
+  }
+}
+.slider{
+  .column();
+  align-items: center;
+  padding: 0!important;
+  &__image{
+
+
+  }
+}
+.indent{
+  margin: 0 0 3%;
+}
+.info{
+  position: absolute;
+  bottom: 8%;
+  background-color: rgba(1, 1, 1, 0.8);
+  width: 35%;
+  height: 58%;
+  right: 5%;
+  .column();
+  align-items: center;
+  &__title{
+    .libre();
+    color:  @white;
+    font-size: 24px;
+    line-height: 22px;
+  }
+  &__text{
+    .libre();
+    color:  @white;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__link{
+    font-family: 'Libre Baskerville', serif;
+    color:  @white;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+  }
+}
+
+.respos{
+  background-color: @lettuce;
+  height: 110px;
+  font-family: 'Fahkwang', sans-serif;
+  color:  #3f7311;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 95px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.25);
+
+}
+.latest{
+  background-color:  @red;
+  height: 110px;
+  width: 31%;
+  margin: 0 1% 0.5%;
+  font-family: 'Fahkwang', sans-serif;
+  color:  #871401;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 95px;
+  text-align: center;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+.image__height{
+  height: 110px;
+}
+.images{
+
+  width: 100%;
+}
+.carousel-inner .carousel-control{
+  width: 95px;
+  top: 229px;
+  opacity: 1;
+}
+.carousel-inner .carousel-control.right
+{
+  background-image: none;
+}
+.carousel-inner .carousel-control.left {
+  background-image: none;
+}
+
+
+
+
+
+
+
+
+
+.footer{
+  .row();
+  &__icon{
+    height: 40px;
+    &--sprite{
+      position: relative;
+      background: url("../img/Icon.svg") no-repeat;
+      height: 40px;
+      width: 40px;
+      border-radius: 4px;
+      &:hover{
+        border: 1px solid;
+      }
+    }
+
+  }
+  &__info{
+    .column();
+    text-align: right;
+    &--name{
+      .nutico();
+      color:  @grey;
+      font-weight: 700;
+      line-height: 23px;
+      text-shadow: 0 1px 1px #ffffff;
+    }
+    &--text{
+      .nutico-one();
+      color:  @grey;
+      font-size: 11px;
+      line-height: 23px;
+    }
+    &--link{
+      .nutico();
+      color:  @grey;
+      font-size: 11px;
+      line-height: 23px;
+      text-shadow: 0 1px 1px #ffffff;
+      text-decoration: none;
+    }
+  }
+}
+.twitter{
+  position: absolute;
+  left: 8%;
+  background-position: -10%;
+  background-color:  #6dcbe3;
+
+}
+.rss{
+  background-position: -27px 5px;
+  position: absolute;
+  left: 19%;
+  background-color:  #ff9f25;
+}
+.facebook{
+  position: absolute;
+  background-position: -72px 5px;
+  left: 31%;
+  background-color:  #5678be;
+}
+.pinterest{
+  left: 43%;
+  position: absolute;
+  background-position: -108px 5px;
+  background-color:  #f13434;
+}
+
+
+.coulp{
+  margin: 0 0 8%;
+}
+
+.image {
+  overflow:hidden;
+}
+.image img {
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+
+}
+
+.image img:hover{
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  cursor:pointer;
+}

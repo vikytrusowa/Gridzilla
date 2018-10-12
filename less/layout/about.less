@@ -1,0 +1,59 @@
+@import "../utils/mixines";
+.rows{
+  .row();
+}
+.about{
+  &__name{
+    .libre();
+    text-align: center;
+  }
+  &__info{
+  .nutico();
+    color:  @light-black;
+    line-height: 16px;
+  }
+  &__text{
+   .nutico-one();
+    color:  @gray;
+    line-height: 18px;
+    padding: 0;
+  }
+
+}
+.paragraph:first-letter{
+  font-family: 'Nunito', sans-serif;
+  color:  @red;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 35px;
+  padding: 0 1% 0 0;
+  float: left;
+}
+.quote{
+.nutico();
+  color:  @gray;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 18px;
+}
+.quote:before{
+  content: "\201c";
+ .nutico-one();
+  color:  @red;
+  font-size: 72px;
+  float: left;
+  padding: 0 2% 0 0;
+  line-height: 60px;
+}
+.forms{
+  .column();
+  justify-content: space-around;
+  height: 175px;
+}
+.comment{
+  .column();
+  &__list{
+    list-style: none;
+  }
+
+}

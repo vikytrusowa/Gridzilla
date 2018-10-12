@@ -14,8 +14,9 @@ li.innerHTML = liText;
 
         var ul = $('.comment__list');
         ul.append(li);
-
+        var obj = JSON.parse(li);
     });
+
 
     $.validator.setDefaults({
         errorPlacement: function(error, element) {

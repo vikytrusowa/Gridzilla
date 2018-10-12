@@ -7,75 +7,63 @@
         $('#main').load(valueLink);
     });
 
-$('.heading__button').on('click', function () {
-   var search =  $('.heading__input').val();
-   console.log(search);
+    $('.heading__button').on('click', function () {
+        var search = $('.heading__input').val();
+        console.log(search);
+        if (search.length < 3) {
+            alert('Для поиска ви должны ввести три или более символов!');
+        } else if (search.length >= 3) {
 
-});
+            var xhr = new XMLHttpRequest;
 
-    /*
-    $('#about').on('click', function () {
-            $('#homes').css('display', 'none');
-        $('#blogs').css('display', 'none');
-        $('#contacts').css('display', 'none');
-
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if(xhr.readyState === 4){
-                    document.getElementById("abouts").innerHTML = xhr.responseText;
-                }
-            };
-            xhr.open('GET', 'about.html');
+            xhr.open('GET', 'blog.json', true);
 
             xhr.send();
 
-        });
-        $('#blog').on('click', function () {
-            $('#homes').css('display', 'none');
-            $('#abouts').css('display', 'none');
-            $('#contacts').css('display', 'none');
-            var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function () {
-                if(xhr.readyState === 4){
-                    document.getElementById("blogs").innerHTML = xhr.responseText;
+                if (this.readyState === 4) {
+                    var respon = JSON.parse(this.responseText);
+                    var str = null;
+                    var result = document.getElementById("main");
+                    result.innerHTML = '';
+
+                    for (var i = 0; i < respon.length; i++) {
+                        str = respon[i];
+                        var name = str.name;
+                        var info = name.toLowerCase().match(search.toLowerCase());
+                        if (info) {
+                            var string =
+                                '<div class=" col-md-3">\n' +
+                                '<img src="' + str.image + '" >\n' +
+                                '<div class="blog__container">\n' +
+                                '<h3 class="blog__container--title">' + str.name + '</h3>\n' +
+                                '<span class="blog__container--data">' + str.data + ' </span>\n' +
+                                '<p class="blog__container--info">' +  str.text + ' </p>\n' +
+                              '<a href="#" onclick="moreInfo(0)" class="blog__container--link">' + str.link + '</a>\n' +
+                                '</div>\n' +
+                            '</div>';
+                            result.innerHTML = result.innerHTML + string;
+                        }
+                    }
+
+
                 }
-            };
-            xhr.open('GET', 'blog.html');
+            }
 
-            xhr.send();
 
-        });
-        $('#contact').on('click', function () {
-            $('#homes').css('display', 'none');
-            $('#blogs').css('display', 'none');
-            $('#abouts').css('display', 'none');
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if(xhr.readyState === 4){
-                    document.getElementById("contacts").innerHTML = xhr.responseText;
-                }
-            };
-            xhr.open('GET', 'contact.html');
 
-            xhr.send();
+        }
 
-        });
-        $('#home').on('click', function () {
-            $('#contacts').css('display', 'none');
-            $('#blogs').css('display', 'none');
-            $('#abouts').css('display', 'none');
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if(xhr.readyState === 4){
-                    document.getElementById("homes").innerHTML = xhr.responseText;
-                }
-            };
-            xhr.open('GET', 'index.html');
 
-            xhr.send();
+    });
+    $('.menu__link').on('click', function () {
+        $('.menu').find('.menu__link').removeClass('menu__link--active');
+        $(this).addClass('menu__link--active');
+    });
 
-        })
+    $(document).ready(function () {
 
-    */
-
+        $('#main').load('home.html');
+    });
+    $('#portfolio').load('blog.html');
 })(jQuery);

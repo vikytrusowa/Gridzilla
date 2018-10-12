@@ -1,51 +1,46 @@
 
-@import "mixines";
+@import "../utils/mixines";
 .blog{
   .column();
+  &__info{
+    .column();
+    align-items: center;
+  }
   &__title{
-    font-family: ChunkFive;
-    color:  #000000;
-    font-size: 30px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
+    .libre();
     text-align: center;
   }
   &__container{
-    border: 1px solid #dbdbdb;
+    border: 1px solid @beige;
     box-sizing: border-box;
-    background-color:  #ffffff;
     width: 220px;
-    height: 206px;
+    height: 216px;
     padding: 0 5%;
     margin: 0 0 5% 0;
     &--title{
-      font-family: HelveticaNeue;
-      color:  #2e2e2e;
-      font-size: 18px;/* Приближение из-за подстановки шрифтов */
+      font-family: 'Nunito', sans-serif;
+      color: @light-black;
+      font-size: 18px;
       font-weight: 700;
       line-height: 18px;
 
     }
     &--data{
-      font-family: HelveticaNeue;
-      color:  #8a8a8a;
-      font-size: 11px;/* Приближение из-за подстановки шрифтов */
-      font-weight: 500;
+      .nutico();
+      color:  @grey;
+      font-size: 11px;
       line-height: 18px;
 
     }
     &--info{
-      font-family: HelveticaNeue;
-      color:  #2f2f2f;
-      font-size: 12px;/* Приближение из-за подстановки шрифтов */
-      font-weight: 400;
+     .nutico-one();
+      color:  @light-black;
       line-height: 18px;
       text-align: left;
     }
     &--link{
-      font-family: HelveticaNeue;
-      color:  #2e2e2e;
-      font-size: 12px;/* Приближение из-за подстановки шрифтов */
-      font-weight: 500;
+     .nutico();
+      color:  @light-black;
       line-height: 28px;
     }
   }
@@ -61,9 +56,8 @@
   margin: 3% 1%;
 }
 .button{
-  font-family: HelveticaNeue;
-  color:  #000000;
-  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  .nutico();
+  color:  @black;
   font-weight: 500;
   border: none;
   background: transparent;
@@ -71,10 +65,10 @@
   &:after{
     content: "/";
     font-weight: 900;
-    color:  #000000;;
+    color:  @black;;
   }
   &__activ{
-    color:  #f03c3c;
+    color:  @red;
   }
 }
 .mask{
@@ -113,22 +107,17 @@
       align-items: flex-end;
       width: 170px;
       height: 50px;
-      font-family: HelveticaNeue;
-      color:  #ffffff;
-      font-size: 12px;/* Приближение из-за подстановки шрифтов */
-      font-weight: 400;
+      .nutico-one();
+      color:  @white;
       line-height: 18px;
     }
   }
 
 }
-.info{
-  .column();
-  align-items: center;
-}
+
 .buttons{
   border-radius: 4px;
-  background-color:  #ececec;
+  background-color:  @light;
   background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
   background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
   background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
@@ -140,15 +129,64 @@
   height: 26px;
   &__activ{
     border-radius: 4px;
-    background-color:  #ececec;
+    background-color:  @light;
     background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, rgba(0, 0, 0, 0.06) 100%);
     background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, rgba(0, 0, 0, 0.06) 100%);
     background: -o-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, rgba(0, 0, 0, 0.06) 100%);
     background: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, rgba(0, 0, 0, 0.06) 100%);
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0%, rgba(0, 0, 0, 0.06) 100%);
     background-color:  rgba(130, 130, 130, 0.09);
-    box-shadow: 0 1px 0 0 #ffffff;
+    box-shadow: 0 1px 0 0 @white;
     width: 26px;
     height: 26px
+  }
+}
+.blog__gallery{
+  justify-content: space-around;
+}
+
+.blog__item--name{
+  .libre();
+  text-align: center;
+}
+.blog__item{
+  .row();
+  align-items: flex-start;
+  &--element{
+    .column();
+  }
+  &--paragraph{
+    .nutico-one();
+    color:  #000000;
+    line-height: 18px;
+  }
+  &--link{
+
+    font-family: 'Nunito', sans-serif;
+    color:  #474747;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  &--container{
+    margin: 0;
+    height: 85px;
+  }
+}
+
+.blog__image{
+  width: 450px;
+  height: 350px;
+  margin: 0 0 5%;
+}
+
+.names{
+  .nutico();
+  color:  @light-black;
+  line-height: 20px;
+  &__info{
+    .nutico-one();
+    color:  @red;
+    line-height: 20px;
   }
 }
