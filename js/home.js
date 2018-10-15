@@ -54,8 +54,7 @@
 
         }
 
-
-    });
+        });
     $('.menu__link').on('click', function () {
         $('.menu').find('.menu__link').removeClass('menu__link--active');
         $(this).addClass('menu__link--active');
@@ -65,5 +64,4 @@
 
         $('#main').load('home.html');
     });
-    $('#portfolio').load('blog.html');
 })(jQuery);

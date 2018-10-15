@@ -9,10 +9,24 @@
 
 a:hover{
   text-decoration: none;
+  color: @red;
+}
+a:active{
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
 }
 @media screen and (max-width: 1025px) {
-.slider{
-
+  .carousel-inner .carousel-control {
+    top: 110px;
 }
-
+  .heading__button{
+    right: 14%;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .heading__button{
+    right: 28%;
+  }
 }
