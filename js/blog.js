@@ -1,6 +1,6 @@
 'use strict';
 (function ($) {
-    $(document).ready(function () {
+
 
 
         $('.filter-button-group').on('click', 'button', function () {
@@ -20,6 +20,7 @@
             $('.js-group').find('.buttons').removeClass('buttons__activ');
             $(this).addClass('buttons__activ');
         });
+    $(document).ready(function () {
         renderItems(1)
 
     });
@@ -98,24 +99,22 @@ function moreInfo(postId) {
 
     xhr.open('GET', 'blog.json', true);
 
-    console.log(postId);
+
     xhr.send();
     xhr.onreadystatechange = function () {
         if (this.readyState === 4) {
 
             var posts = JSON.parse(this.responseText);
-            console.log(posts);
+
             var info = document.getElementById("more");
 
 
-            let post = null;
-            for (let i = 0; i < posts.length; i++) {
+            var post = null;
+            for (var i = 0; i < posts.length; i++) {
                 if (posts[i].id == postId) {
                     post = posts[i]
                 }
             }
-
-            console.log(post);
 
 
             var infoText =
@@ -178,7 +177,7 @@ function moreInfo(postId) {
 
 
             info.innerHTML = infoText;
-            console.log(info);
+
 
         }
     }

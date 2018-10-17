@@ -15,7 +15,6 @@
 
             var ul = $('.comment__list');
             ul.append(li);
-            var obj = JSON.parse(li);
         });
 
 
@@ -31,7 +30,7 @@
 
             if ($(form).valid()) {
                 var str = $(form).serialize();
-                console.log(str);
+
 
             } else {
                 $(form).validate();
