@@ -13,6 +13,13 @@
       text-align: center;
     }
   }
+  &__form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__input{
     border: 1px solid @light;
     box-sizing: border-box;
@@ -20,13 +27,11 @@
     height: 33px;
     color: @light;
     text-indent: 10px;
-    position: relative;
+
 
   }
   &__button{
     background:  url("../img/search.png") no-repeat;
-    position: absolute;
-    right: 20%;
     height: 20px;
     width: 20px;
     border: none;
